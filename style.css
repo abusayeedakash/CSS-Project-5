@@ -1,0 +1,122 @@
+/* ?Global Css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --headingtxt: "Poppins", sans-serif;
+  --bodytxt: "Montserrat", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-image: url(./hero-bg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+}
+
+.login-warrap {
+  width: 400px;
+  padding: 25px;
+  border: 2px solid rgba(174, 174, 174, 0.444);
+  border-radius: 8px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form h2 {
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  font-family: var(--headingtxt);
+  margin-bottom: 20px;
+}
+.input-field {
+  margin: 15px 0;
+  position: relative;
+  border-bottom: 2px solid white;
+}
+.input-field input {
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 12px;
+}
+.input-field label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  color: white;
+  transform: translateY(-50%);
+  font-size: 14px;
+  font-family: var(--bodytxt);
+  pointer-events: none;
+  transition: 0.03s ease;
+}
+.input-field input:focus ~ label,
+.input-field input:valid ~ label {
+  transform: translateY(-120%);
+  font-size: 12px;
+  top: 10px;
+}
+.password-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 25px 0 35px 0;
+  color: white;
+}
+.password-option label {
+  display: flex;
+  align-items: center;
+}
+
+.password-option label p {
+  margin-left: 8px;
+}
+.password-option a {
+  color: white;
+}
+button {
+  background: white;
+  display: block;
+  padding: 10px 0;
+  border: none;
+  text-align: center;
+  font-size: 14px;
+  font-family: var(--bodytxt);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+button:hover {
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.321);
+  color: white;
+}
+.account-option {
+  margin-top: 20px;
+  color: white;
+  font-family: var(--bodytxt);
+  text-align: center;
+  font-size: 13px;
+}
+.account-option a {
+  color: white;
+}
